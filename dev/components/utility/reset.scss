@@ -1,0 +1,22 @@
+body {
+  font-family: 'Inter', 'Open Sans', sans-serif, --apple-system;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  outline:none;
+}
