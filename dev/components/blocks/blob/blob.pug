@@ -1,0 +1,15 @@
+mixin Blob(settings)
+    - var size = !!settings.size ? `blob_${settings.size}` : ''
+    - var classes = !!settings.additionalClasses ? `${settings.additionalClasses} blob ${size}` : `blob ${size}`
+
+    div(class=classes)
+        if (settings.iconType === 'svg')
+            svg
+                use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${settings.iconId}`)
+        else if (settings.iconType === 'img')
+          img(src=`./assets/images/${settings.iconId}` alt="")
+
+        if (!!settings.link)
+            a(href=settings.link target="_blank")=`${settings.text} >`
+        else
+            span=settings.text

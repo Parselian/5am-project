@@ -4,6 +4,8 @@ mixin Button(settings)
 
     if (settings.type === 'transparent')
         - var buttonClasses = `${settings.additionalClasses} button button_transparent`
+    else if (settings.type === 'normal')
+        - var buttonClasses = `${settings.additionalClasses} button`
 
     if (!!settings.iconID)
         button(id=settings.id class=buttonClasses)

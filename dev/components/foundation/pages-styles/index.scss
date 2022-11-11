@@ -1,3 +1,8 @@
 body {
   background: $page-bg-color center center no-repeat;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }

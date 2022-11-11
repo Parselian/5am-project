@@ -1,0 +1,56 @@
+.blob {
+  width: 196px;
+  height: 196px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: $blob-bg-color;
+  border: 2px solid $inactive-text-color;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  border-radius: 1000px;
+  &_sm {
+    width: 136px;
+    height: 136px;
+  }
+  &_xl {
+    width: 196px;
+    height: 196px;
+  }
+  svg {
+    margin-bottom: 7px;
+    display: block;
+    max-width: 72px;
+    max-height: 72px;
+  }
+  img {
+    margin-bottom: 7px;
+    display: block;
+    max-width: 72px;
+    max-height: 72px;
+  }
+  span {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    text-align: center;
+    display: block;
+    color: $alt-text-color
+  }
+  a {
+    color: $link-color;
+  }
+
+  @media (max-width: 576px) {
+    &_sm {
+      width: 120px;
+      height: 120px;
+    }
+    &_xl {
+      width: 170px;
+      height: 170px;
+    }
+  }
+}

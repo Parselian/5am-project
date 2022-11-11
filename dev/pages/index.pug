@@ -2,9 +2,73 @@ extends ../layouts/default
 
 block mixins
     include ../components/blocks/header/header
+    include ../components/blocks/promo/promo
 
 block content
     +Header()
+    +Promo({
+      title: "#PropTech",
+      buttonSettings: {
+        text: "Написать",
+        additionalClasses: 'promo__button',
+        type: 'normal',
+        iconID: null,
+        iconPosition: null
+      },
+      blobs: [
+        {
+          additionalClasses: 'promo__blob promo__blob_first',
+          size: 'xl',
+          iconType: 'svg',
+          iconId: 'village-service',
+          text: 'Сервис для УК посёлков',
+          isAnimated: true
+        },
+        {
+          additionalClasses: 'promo__blob promo__blob_second',
+          size: 'sm',
+          iconType: 'svg',
+          iconId: 'blob-icon-2',
+          text: 'Перейти',
+          link: '#',
+          isAnimated: false
+        },
+        {
+          additionalClasses: 'promo__blob promo__blob_third',
+          size: 'sm',
+          iconType: 'svg',
+          iconId: 'village-service',
+          text: 'Перейти',
+          link: '#',
+          isAnimated: false
+        },
+        {
+          additionalClasses: 'promo__blob promo__blob_fourth',
+          size: 'xl',
+          iconType: 'img',
+          iconId: 'software-agency-icon.png',
+          text: 'Студия разработки ПО',
+          isAnimated: false
+        },
+        {
+          additionalClasses: 'promo__blob promo__blob_fifth',
+          size: 'xl',
+          iconType: 'svg',
+          iconId: '3d-design-icon',
+          text: 'Студия 3D дизайна',
+          isAnimated: true
+        },
+        {
+          additionalClasses: 'promo__blob promo__blob_sixth',
+          size: 'sm',
+          iconType: 'svg',
+          iconId: 'blob-icon-3',
+          text: 'Перейти',
+          link: '#',
+          isAnimated: false
+        }
+      ]
+    })
 
 block scripts
     script(src="./assets/js/index.js")

@@ -1,0 +1,15 @@
+include ../button/button
+include ../blob/blob
+
+mixin Promo(settings)
+    .promo
+        .promo__wrap.container
+            .promo__col
+                h1.promo__title.title=settings.title
+                .promo__subtitle.line-break.
+                    Мы инвестируем в IT, а наши бренды #[<span class="line-break"></span>] разрабатывают инновацонные продукты
+                if (!!settings.buttonSettings)
+                    +Button(settings.buttonSettings)
+            .promo__col
+              each blob in settings.blobs
+                  +Blob(blob)

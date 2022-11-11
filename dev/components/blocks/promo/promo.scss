@@ -1,0 +1,177 @@
+.promo {
+  margin: 226px 0;
+  &__wrap {
+    position: relative;
+    display: flex;
+  }
+  &__title {
+    margin-bottom: 40px;
+    font-size: 64px;
+    color: $promo-title-color;
+  }
+  &__subtitle {
+    margin-bottom: 140px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-color;
+  }
+  &__button {
+    padding: 12px 100px;
+    font-weight: 600;
+  }
+  &__blob {
+    position: absolute;
+    &_first {
+      top: -190px;
+      right: 260px;
+      svg {
+        width: 72px;
+        height: 72px;
+      }
+    }
+    &_second {
+      top: -120px;
+      right: 110px;
+      svg {
+        width: 58px;
+        height: 55px;
+      }
+    }
+    &_third {
+      top: -35px;
+      right: 430px;
+      svg {
+        width: 46px;
+        height: 46px;
+      }
+    }
+    &_fourth {
+      top: 40px;
+      right: 240px;
+      svg {
+        width: 75px;
+        height: 83px;
+      }
+    }
+    &_fifth {
+      top: 40px;
+      right: 20px;
+      svg {
+        width: 97px;
+        height: 54px;
+      }
+    }
+    &_sixth {
+      top: 255px;
+      right: 90px;
+      svg {
+        width: 54px;
+        height: 42px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    margin: 140px 0 0 0;
+    padding-bottom: 430px;
+    &__title, &__subtitle {
+      text-align: center;
+    }
+    &__button {
+      display: none;
+    }
+    &__col {
+      &:first-child {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &__blob {
+      &_first {
+        top: 380px;
+        right: 70px;
+      }
+      &_second {
+        top: 500px;
+        right: 265px;
+      }
+      &_third {
+        top: 225px;
+        right: 140px;
+      }
+      &_fourth {
+        top: 290px;
+        right: 280px;
+      }
+      &_fifth {
+        top: 460px;
+        right: 420px;
+      }
+      &_sixth {
+        top: 310px;
+        right: 495px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 600px;
+    &__blob {
+      &_first {
+        top: 220px;
+        right: 260px;
+      }
+      &_second {
+        top: 435px;
+        right: 320px;
+      }
+      &_third {
+        top: 245px;
+        right: 110px;
+      }
+      &_fourth {
+        top: 590px;
+        right: 270px;
+      }
+      &_fifth {
+        top: 400px;
+        right: 100px;
+      }
+      &_sixth {
+        top: 610px;
+        right: 115px;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    &__blob {
+      position: relative;
+      &_first {
+        top: 220px;
+        right: 50.5vw;
+      }
+      &_second {
+        top: 400px;
+        right: 67vw;
+      }
+      &_third {
+        top: 255px;
+        left: 59vw;
+      }
+      &_fourth {
+        top: 535px;
+        right: 51vw;
+      }
+      &_fifth {
+        top: 390px;
+        left: 43vw;
+      }
+      &_sixth {
+        top: 570px;
+        left: 58vw;
+      }
+    }
+  }
+}
