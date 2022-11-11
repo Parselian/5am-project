@@ -1,0 +1,9 @@
+mixin Menu(settings)
+    - var classes = !!settings.additionalClasses ? `${settings.additionalClasses} menu` : 'menu'
+
+    nav(id=settings.id class=classes)
+        each data in settings.items
+            if (!!data.link)
+                a(class="menu__item" href=data.link)=data.text
+            else
+                span(class="menu__item")=data.text

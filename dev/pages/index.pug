@@ -1,8 +1,10 @@
 extends ../layouts/default
 
 block mixins
+    include ../components/blocks/header/header
 
 block content
+    +Header()
 
 block scripts
     script(src="./assets/js/index.js")

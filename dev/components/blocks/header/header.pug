@@ -1,0 +1,45 @@
+include ../logo/logo
+include ../button/button
+include ../menu/menu
+
+mixin Header()
+  .header
+    .header__wrap.container
+      +Logo({
+        id: 'logo_colorful',
+        additionalClasses: 'header__logo',
+        size: 'md'
+      })
+      +Menu({
+        additionalClasses: 'header__menu',
+        items: [
+          {
+            text: 'Главная',
+            link: '#homepage'
+          },
+          {
+            text: 'Новости',
+            link: '#news'
+          },
+          {
+            text: 'Вакансии',
+            link: '#vacancies'
+          },
+          {
+            text: 'Документы',
+            link: '#documents'
+          },
+          {
+            text: 'Контакты',
+            link: '#contacts'
+          }
+        ]
+      })
+      +Button({
+        type: 'transparent',
+        text: 'IT-аккредитация',
+        id: 'accreditation-button',
+        additionalClasses: 'header__button',
+        iconID: 'check',
+        iconPosition: 'left'
+      })

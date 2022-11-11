@@ -1,0 +1,5 @@
+mixin Logo(settings)
+    - var logoSize = !!settings.size ? `logo_${settings.size}` : ''
+
+    svg(class=`${settings.additionalClasses} logo ${logoSize}`)
+        use( xlink:href=`./assets/images/svg/symbol/sprite.svg#${settings.id}`)

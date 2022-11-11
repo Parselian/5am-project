@@ -1,0 +1,14 @@
+mixin Button(settings)
+    - var buttonClasses = `${settings.additionalClasses} button`
+    - var iconPositionClass = settings.iconPosition === 'left' ? 'button__icon_left' : 'button__icon_right'
+
+    if (settings.type === 'transparent')
+        - var buttonClasses = `${settings.additionalClasses} button button_transparent`
+
+    if (!!settings.iconID)
+        button(id=settings.id class=buttonClasses)
+            span=settings.text
+            svg(class=`button__icon ${iconPositionClass}`)
+                use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${settings.iconID}`)
+    else
+        button(id=id class=buttonClasses)=settings.text
