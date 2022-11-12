@@ -1,0 +1,33 @@
+.proposal {
+  padding: 0 0 144px 0;
+  &__content {
+    max-width: 640px;
+  }
+  &__title {
+    margin-bottom: 28px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-color;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 0 80px 0;
+    &__title {
+      margin-bottom: 24px;
+      &_stylish {
+        display: block;
+        font-size: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    &__title {
+      &_stylish {
+        font-size: 28px;
+      }
+    }
+  }
+}
