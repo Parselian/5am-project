@@ -5,6 +5,9 @@
   }
   &__slide {
     &r {
+      //position: relative;
+      width: 84vw;
+      //overflow: visible;
       display: flex;
     }
     padding: 30px 16px 16px;
