@@ -1,6 +1,8 @@
 'use-strict'
 
+  AOS.init()
 document.addEventListener('DOMContentLoaded', () => {
+
   const burgerMenuContent = document.querySelector('.burger-menu__content'),
     burgerBtns = document.querySelectorAll('.burger-btn'),
     burgerMenuNavLinks = document.querySelectorAll('.burger-menu__nav-link')
@@ -30,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sensitivity: 2
       }
     })
-
   }
   sliderInit()
 
@@ -43,8 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollPos = 0
 
     window.addEventListener('scroll', () => {
-      const coords = skillsSliderWrap.getBoundingClientRect()
-
       function checkScrollDirection () {
         const direction = window.pageYOffset > scrollPos ? 'down' : 'up'
         scrollPos = window.pageYOffset
@@ -58,8 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         skillsSliderFirstRow.style.transform = `translateX(${sliderOffset}px)`
         skillsSliderSecondRow.style.transform = `translateX(${sliderOffset * -1}px)`
-      if (coords.top < 900 && coords.top > -614) {
-      }
     })
   }
   skillsSliderInit()

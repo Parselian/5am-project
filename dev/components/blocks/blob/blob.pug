@@ -2,7 +2,7 @@ mixin Blob(settings)
     - var size = !!settings.size ? `blob_${settings.size}` : ''
     - var classes = !!settings.additionalClasses ? `${settings.additionalClasses} blob ${size}` : `blob ${size}`
 
-    div(class=classes)
+    div(class=classes data-aos="fade-up")
         if (settings.isAnimated === true)
             svg.blob__animation
                 use(xlink:href=`./assets/images/svg/symbol/sprite.svg#blob-animation`)
