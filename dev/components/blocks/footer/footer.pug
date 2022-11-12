@@ -1,0 +1,47 @@
+include ../menu/menu
+include ../logo/logo
+
+mixin Footer()
+    .footer
+        .footer__wrap.container
+            .footer__col
+                +Menu({
+                  id: 'footer__menu',
+                  additionalClasses: 'footer__menu',
+                  items: [
+                    {
+                      linkClasses: 'footer__menu-link',
+                      link: '#',
+                      text: 'Главная'
+                    },
+                    {
+                      linkClasses: 'footer__menu-link footer__menu-link_mobile-hide',
+                      link: '#',
+                      text: 'Документы'
+                    },
+                    {
+                      linkClasses: 'footer__menu-link',
+                      link: '#',
+                      text: 'Новости'
+                    },
+                    {
+                      linkClasses: 'footer__menu-link footer__menu-link_mobile-hide',
+                      link: '#',
+                      text: 'Контакты'
+                    },
+                    {
+                      linkClasses: 'footer__menu-link',
+                      link: '#',
+                      text: 'Вакансии'
+                    }
+                  ]
+                })
+                .footer__copyright &copy; 5am ltd. 2018-2022
+            .footer__col
+                +Logo({
+                  id: 'footer-logo',
+                  size: 'sm',
+                  additionalClasses: 'footer__logo'
+                })
+                .footer__credentials ООО “Файв ЭйЭм” #[span.line-break]7100005252
+                .footer__location Москва, Озерковская набережная, 50с1

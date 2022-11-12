@@ -1,5 +1,9 @@
 .logo {
   display: block;
+  &_sm {
+    width: 60px;
+    height: 60px;
+  }
   &_md {
     width: 86px;
     height: 86px;

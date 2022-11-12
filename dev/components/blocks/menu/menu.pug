@@ -3,7 +3,8 @@ mixin Menu(settings)
 
     nav(id=settings.id class=classes)
         each data in settings.items
+            - var linkClasses = !!data.linkClasses ? `${data.linkClasses} menu__item` : 'menu__item'
             if (!!data.link)
-                a(class="menu__item" href=data.link)=data.text
+                a(class=linkClasses href=data.link)=data.text
             else
                 span(class="menu__item")=data.text
