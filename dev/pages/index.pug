@@ -3,7 +3,7 @@ extends ../layouts/default
 block mixins
     include ../components/blocks/header/header
     include ../components/blocks/promo/promo
-    include ../components/blocks/about/about
+    include ../components/blocks/statistics/statistics
 
 block content
     +Header()
@@ -70,7 +70,7 @@ block content
         }
       ]
     })
-    +About()
+    +Statistics()
 
 block scripts
     script(src="./assets/js/index.js")

@@ -1,0 +1,12 @@
+mixin Card(title, text)
+  .statistics__card
+      h3.statistics__card-title=title
+      div.statistics__card-text=text
+
+mixin Statistics()
+    .statistics
+        .statistics__wrap.container
+            +Card('7 брендов', 'Под нашим чутким контролем')
+            +Card('15 человек', 'Специалистов, качественно работающих над проектами')
+            +Card('100 млн', 'Рублей в обороте наших проектов')
+            +Card('5 лет', 'На IT-рынке')
