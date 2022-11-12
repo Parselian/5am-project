@@ -1,0 +1,26 @@
+.burger-btn {
+  width: 30px;
+  cursor: pointer;
+
+  &:before, &:after, div {
+    margin: 8px 0;
+    content: "";
+    display: block;
+    height: 2px;
+    background: $burger-btn-color;
+    border-radius: 3px;
+    transition: 0.5s;
+  }
+
+  &:hover:before {
+    transform: translateY(10px) rotate(135deg);
+  }
+
+  &:hover:after {
+    transform: translateY(-10px) rotate(-135deg);
+  }
+
+  &:hover div {
+    transform: scale(0);
+  }
+}

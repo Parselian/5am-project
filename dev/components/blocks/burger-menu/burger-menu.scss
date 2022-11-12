@@ -1,0 +1,235 @@
+.burger-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background: $burger-menu-bg-color;
+  backdrop-filter: blur(20px);
+
+  &__content {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 90px);
+  }
+
+  &__nav {
+    position: relative;
+    margin-left: 72px;
+    top: 32vh;
+
+    &-link {
+      display: block;
+      font-size: 32px;
+      font-weight: 700;
+      color: $text-color;
+
+      svg {
+        position: absolute;
+        left: -50px;
+        stroke: $text-color;
+        stroke-width: 2px;
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+        transition: .2s;
+      }
+
+      &_active {
+        position: relative;
+        color: $burger-menu-active-link-color;
+
+        svg {
+          stroke: $burger-menu-active-link-color;
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        svg {
+          opacity: 0.2;
+          stroke: $text-color;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+
+    }
+  }
+
+  &__social {
+    &s {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-wrap {
+      width: 53px;
+      height: 53px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-border-radius: 22px;
+      -moz-border-radius: 22px;
+      border-radius: 22px;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &_separated {
+      position: relative;
+      margin-right: 20px !important;
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: -12px;
+        content: '';
+        width: 2px;
+        height: 90%;
+        background-color: #295A78;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        transform: translateY(-50%);
+      }
+    }
+
+    &_linkedIn {
+      background: linear-gradient(335.58deg, #006699 11.4%, #058CCF 96.83%);
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &_habr {
+      background: #629FBC;
+
+      svg {
+        width: 35px;
+        height: 38px;
+      }
+    }
+
+    &_vk {
+      background: linear-gradient(335.58deg, #1568C8 17.63%, #3F98FF 90.6%);
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &_telegram {
+      background: linear-gradient(137.24deg, #0088CC 8.1%, #0083C5 94.96%);
+
+      svg {
+        position: relative;
+        left: -3px;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &_mail {
+      background: linear-gradient(335.58deg, #8CD7FD 11.4%, #0078CE 96.83%);
+
+      svg {
+        width: 23px;
+        height: 20px;
+      }
+    }
+
+    max-width: 32px;
+    max-height: 32px;
+  }
+
+  &__bar {
+    position: relative;
+    padding: 24px 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0px;
+      left: 50%;
+      width: 90%;
+      padding: 0 16px;
+      opacity: 0.2;
+      border: 2px solid #295A78;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__button {
+    padding: 12px 24px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 992px) {
+    display: block;
+  }
+
+  @media (max-width: 380px) {
+    &__social {
+      &-wrap {
+        width: 45px;
+        height: 45px;
+      }
+
+      &_linkedIn {
+        svg {
+          width: 27px;
+          height: 27px;
+        }
+      }
+
+      &_habr {
+        svg {
+          width: 30px;
+          height: 33px;
+        }
+      }
+
+      &_vk {
+        svg {
+          width: 27px;
+          height: 27px;
+        }
+      }
+
+      &_telegram {
+        svg {
+          width: 27px;
+          height: 27px;
+        }
+      }
+
+      &_mail {
+        svg {
+          width: 20px;
+          height: 17px;
+        }
+      }
+    }
+  }
+}

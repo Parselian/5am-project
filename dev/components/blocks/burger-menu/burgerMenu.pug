@@ -1,0 +1,72 @@
+include ../menu/menu
+include ../button/button
+include ../burger-btn/burgerBtn
+
+mixin BurgerMenuSocial(iconId, link, additionalClasses)
+    - var classes = `burger-menu__social-wrap ${additionalClasses}`
+
+    a(class=classes href=link target="_blank")
+        svg.burger-menu__social
+            use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${iconId}`)
+
+mixin BurgerMenu()
+    .burger-menu
+        .burger-menu__content
+            +Menu({
+              additionalClasses: 'burger-menu__nav',
+              items: [
+                {
+                  linkClasses: 'burger-menu__nav-link burger-menu__nav-link_active',
+                  link: '#',
+                  type: 'withIcon',
+                  iconPosition: 'left',
+                  iconId: 'arrow_right',
+                  text: 'Главная'
+                },
+                {
+                  linkClasses: 'burger-menu__nav-link',
+                  link: '#',
+                  type: 'withIcon',
+                  iconPosition: 'left',
+                  iconId: 'arrow_right',
+                  text: 'Новости'
+                },
+                {
+                  linkClasses: 'burger-menu__nav-link',
+                  link: '#',
+                  type: 'withIcon',
+                  iconPosition: 'left',
+                  iconId: 'arrow_right',
+                  text: 'Вакансии'
+                },
+                {
+                  linkClasses: 'burger-menu__nav-link',
+                  link: '#',
+                  type: 'withIcon',
+                  iconPosition: 'left',
+                  iconId: 'arrow_right',
+                  text: 'Документы'
+                },
+                {
+                  linkClasses: 'burger-menu__nav-link',
+                  link: '#',
+                  type: 'withIcon',
+                  iconPosition: 'left',
+                  iconId: 'arrow_right',
+                  text: 'Контакты'
+                },
+              ]
+            })
+            .burger-menu__socials
+                +BurgerMenuSocial('linkedIn-icon', '#', 'burger-menu__social_linkedIn')
+                +BurgerMenuSocial('habr-icon', '#', 'burger-menu__social_habr')
+                +BurgerMenuSocial('vk-icon', '#', 'burger-menu__social_vk')
+                +BurgerMenuSocial('telegram-icon', '#', 'burger-menu__social_telegram burger-menu__social_separated')
+                +BurgerMenuSocial('mail-icon', '#', 'burger-menu__social_mail')
+        .burger-menu__bar
+            +BurgerBtn()
+            +Button({
+              type: 'normal',
+              additionalClasses: 'burger-menu__button',
+              text: "Написать"
+            })

@@ -1,0 +1,14 @@
+.menu {
+  &__item {
+    display: flex;
+    align-items: center;
+    &-icon {
+      &_right {
+        order: 1;
+      }
+      &_left {
+        order: -1;
+      }
+    }
+  }
+}
