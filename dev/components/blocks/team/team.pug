@@ -1,0 +1,30 @@
+mixin TeamCard(path, alt, name, position, text)
+    .team__card
+        .team__card-img-wrap
+            img(src=`./assets/images/${path}` alt=alt).team__card-img
+        .team__card-info
+            .team__card-name=name
+            .team__card-position=position
+            .team__card-text=text
+
+mixin Team()
+    .team
+        .team__wrap.container
+            h2.team__title.title Ключевые лица
+            .team__cards
+                +TeamCard(
+                  'employee-1.png',
+                  '',
+                  'Серебренников Клим',
+                  'Генеральный директор, основатель',
+                  `Всем привет! Мы создали “Пять утра”, потому что горим разработкой новых технологий и хотим,
+                  чтобы Россия стала мировым IT хабом. Невероятный кайф видеть довольных пользователей и бизнес!`
+                )
+                +TeamCard(
+                  'employee-2.png',
+                  '',
+                  'Милованов Сергей',
+                  'Технический директор, основатель',
+                  `Привет! За такими технологиями, как искусственный интеллект, метавселенные, нейросети, игровые движки
+                   будущее. Наша цель и задача создать уникальные собственные решения!`
+                )

@@ -5,7 +5,8 @@ block mixins
     include ../components/blocks/promo/promo
     include ../components/blocks/statistics/statistics
     include ../components/blocks/brands/brands
-      include ../components/blocks/skills/skills
+    include ../components/blocks/skills/skills
+    include ../components/blocks/team/team
 
 block content
     +Header()
@@ -75,6 +76,7 @@ block content
     +Statistics()
     +Brands()
     +Skills()
+    +Team()
 
 block scripts
     script(src="./assets/js/index.js")
