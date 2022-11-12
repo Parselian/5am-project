@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerMenuNavLinks = document.querySelectorAll('.burger-menu__nav-link')
 
   const burgerMenuInit = (target) => {
-    if ( !!target.closest('.burger-btn')) {
+    if (!!target.closest('.burger-btn')) {
       burgerBtns.forEach(btn => btn.classList.toggle('burger-btn_active'))
       burgerMenuContent.classList.toggle('burger-menu__content_visible')
     } else if (!target.closest('.burger-menu__bar') && !target.closest('.burger-btn')) {
@@ -33,6 +33,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
   sliderInit()
+
+  const skillsSliderInit = () => {
+    const skillsSliderWrap = document.querySelector('.skills__slider'),
+      skillsSliderFirstRow = skillsSliderWrap.querySelector('.skills__slider-row'),
+      skillsSliderSecondRow = skillsSliderWrap.querySelector('.skills__slider-row:last-child')
+
+    let sliderOffset = 0,
+      scrollPos = 0
+
+    window.addEventListener('scroll', () => {
+      const coords = skillsSliderWrap.getBoundingClientRect()
+
+      function checkScrollDirection () {
+        const direction = window.pageYOffset > scrollPos ? 'down' : 'up'
+        scrollPos = window.pageYOffset
+        return direction
+      }
+
+        if (checkScrollDirection() === 'down') {
+          sliderOffset += 2
+        } else {
+          sliderOffset -= 2
+        }
+        skillsSliderFirstRow.style.transform = `translateX(${sliderOffset}px)`
+        skillsSliderSecondRow.style.transform = `translateX(${sliderOffset * -1}px)`
+      if (coords.top < 900 && coords.top > -614) {
+      }
+    })
+  }
+  skillsSliderInit()
 
   document.addEventListener('click', e => {
     const target = e.target
