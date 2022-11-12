@@ -1,0 +1,55 @@
+include ../button/button
+
+mixin BrandsCard(iconId, title, text, buttonText)
+    .brands__slide
+        svg
+            use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${iconId}`)
+        .brands__slide-title=title
+        .brands__slide-text=text
+        +Button({
+          type: 'inverted',
+          additionalClasses: 'brands__slide-button',
+          iconPosition: null,
+          iconID: null,
+          text: buttonText
+        })
+
+mixin Brands(settings)
+    .brands
+        .brands__wrap.container
+            h2.title Наши бренды
+            .brands__slider
+                +BrandsCard(
+                  'wildpip-icon',
+                  'Студия разработки игр',
+                  'Команда специалистов, разрабатывающая казуальные игры для международного рынка на базе Unity',
+                  'Подробнее'
+                )
+                +BrandsCard(
+                  'arevrena-icon',
+                  'Студия 3D дизайна',
+                  `Студия разработки VR/AR приложений для бизнеса. 3D симуляции бизнес процессов, инструменты для
+                  маркетинга и продаж`,
+                  'Подробнее'
+                )
+                +BrandsCard(
+                  'tt-control-icon',
+                  'Студия 3D дизайна',
+                  `Студия разработки VR/AR приложений для бизнеса. 3D симуляции бизнес процессов, инструменты для
+                  маркетинга и продаж`,
+                  'Подробнее'
+                )
+                +BrandsCard(
+                  'y-integrator-icon',
+                  'Студия 3D дизайна',
+                  `Студия разработки VR/AR приложений для бизнеса. 3D симуляции бизнес процессов, инструменты для
+                  маркетинга и продаж`,
+                  'Подробнее'
+                )
+                +BrandsCard(
+                  'lokeo-icon',
+                  'Студия 3D дизайна',
+                  `Студия разработки VR/AR приложений для бизнеса. 3D симуляции бизнес процессов, инструменты для
+                  маркетинга и продаж`,
+                  'Подробнее'
+                )

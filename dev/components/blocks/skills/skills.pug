@@ -1,0 +1,56 @@
+include ../skill-blob/skillBlob
+
+mixin SkillCard(iconId, title, text)
+    .skills__card
+        svg.skills__card-icon
+            use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${iconId}`)
+        .skills__card-title=title
+        .skills__card-text=text
+
+mixin Skills()
+    .skills
+        .skills__wrap.container
+            h2.skills__title.title Что мы можем?
+            .skills__cards
+                +SkillCard(
+                  'external-drive',
+                  'ERP / CMS / CRM / SAAS',
+                  `Имеем компетенцию и концентрируемся на разработке сложных, разветвлённых систем: алгоритмы обработки
+                  данных, сложные цепочки процессов, админки и личне кабинеты`
+                )
+                +SkillCard(
+                  'ghost',
+                  'AR / VR / GAMEDEV',
+                  `Разрабатываем крупные проекты с применением VR управления и размещения информации с помощью AR, а также
+                  развиваем собственные игровые проекты`
+                )
+                +SkillCard(
+                  'monitor',
+                  'DIGITAL MARKETING',
+                  `Создаем продающие сайты с нуля от концепции и фирменного стиля до продвижения в сети`
+                )
+        .skills__slider
+            .skills__slider-row
+                +SkillBlob('html-icon')
+                +SkillBlob('css-icon')
+                +SkillBlob('unity-icon')
+                +SkillBlob('ue-icon')
+                +SkillBlob('php-icon')
+                +SkillBlob('python-icon')
+                +SkillBlob('vue-icon')
+                +SkillBlob('js-icon')
+                +SkillBlob('react-icon')
+                +SkillBlob('c-sharp-icon')
+                +SkillBlob('webgl-icon')
+            .skills__slider-row
+                +SkillBlob('vue-icon')
+                +SkillBlob('net-icon')
+                +SkillBlob('php-icon')
+                +SkillBlob('react-icon')
+                +SkillBlob('webgl-icon')
+                +SkillBlob('c-sharp-icon')
+                +SkillBlob('css-icon')
+                +SkillBlob('unity-icon')
+                +SkillBlob('python-icon')
+                +SkillBlob('ue-icon')
+                +SkillBlob('js-icon')

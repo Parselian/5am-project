@@ -1,0 +1,36 @@
+.brands {
+  padding: 120px 0;
+  &__title {
+    margin-bottom: 80px;
+  }
+  &__slide {
+    &r {
+      display: flex;
+    }
+    padding: 63px 16px 16px;
+    width: 245px;
+    border: 2px solid $brands-slide-border-color;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    svg {
+      margin-bottom: 30px;
+      max-width: 190px;
+    }
+    &-title {
+      margin-bottom: 24px;
+      font-size: 16px;
+      font-weight: 500;
+      color: $brands-slide-title-color;
+    }
+    &-text {
+      margin-bottom: 35px;
+      font-size: 14px;
+      color: $text-color;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 0;
+  }
+}

@@ -1,0 +1,24 @@
+.skill-blob {
+  padding: 23px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $skill-blob-bg-color;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  border-radius: 1000px;
+  svg {
+    display: block;
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 15px;
+    svg {
+      max-width: 55px;
+      max-height: 55px;
+    }
+  }
+}
