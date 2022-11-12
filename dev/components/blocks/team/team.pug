@@ -2,6 +2,8 @@ mixin TeamCard(path, alt, name, position, text)
     .team__card
         .team__card-img-wrap
             img(src=`./assets/images/${path}` alt=alt).team__card-img
+            svg.team__card-img-animation
+                use(xlink:href=`./assets/images/svg/symbol/sprite.svg#person-animation`)
         .team__card-info
             .team__card-name=name
             .team__card-position=position

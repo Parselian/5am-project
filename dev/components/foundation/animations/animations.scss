@@ -1,0 +1,7 @@
+@keyframes rotate {
+  from {
+    transform: translateX(-59%) translateY(-50%) rotate(0)
+  } to {
+    transform: translateX(-59%) translateY(-50%) rotate(-360deg)
+  }
+}

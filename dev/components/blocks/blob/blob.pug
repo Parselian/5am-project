@@ -3,6 +3,9 @@ mixin Blob(settings)
     - var classes = !!settings.additionalClasses ? `${settings.additionalClasses} blob ${size}` : `blob ${size}`
 
     div(class=classes)
+        if (settings.isAnimated === true)
+            svg.blob__animation
+                use(xlink:href=`./assets/images/svg/symbol/sprite.svg#blob-animation`)
         if (settings.iconType === 'svg')
             svg
                 use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${settings.iconId}`)
