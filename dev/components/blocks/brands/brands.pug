@@ -2,8 +2,9 @@ include ../button/button
 
 mixin BrandsCard(iconId, title, text, buttonText)
     .brands__slide
-        svg
-            use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${iconId}`)
+        .brands__slide-icon-wrap
+            svg.brands__slide-icon
+                use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${iconId}`)
         .brands__slide-title=title
         .brands__slide-text=text
         +Button({
@@ -15,7 +16,7 @@ mixin BrandsCard(iconId, title, text, buttonText)
         })
 
 mixin Brands(settings)
-    .brands
+    .brands.divider
         .brands__wrap.container
             h2.title Наши бренды
             .brands__slider

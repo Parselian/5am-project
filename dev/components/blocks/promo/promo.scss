@@ -1,5 +1,5 @@
 .promo {
-  margin: 226px 0;
+  padding: 226px 0;
   &__wrap {
     position: relative;
     display: flex;
@@ -22,7 +22,7 @@
   &__blob {
     position: absolute;
     &_first {
-      top: -190px;
+      top: -170px;
       right: 260px;
       svg {
         width: 72px;
@@ -30,7 +30,7 @@
       }
     }
     &_second {
-      top: -120px;
+      top: -100px;
       right: 110px;
       svg {
         width: 58px;
@@ -38,7 +38,7 @@
       }
     }
     &_third {
-      top: -35px;
+      top: -15px;
       right: 430px;
       svg {
         width: 46px;
@@ -46,7 +46,7 @@
       }
     }
     &_fourth {
-      top: 40px;
+      top: 60px;
       right: 240px;
       svg {
         width: 75px;
@@ -54,7 +54,7 @@
       }
     }
     &_fifth {
-      top: 40px;
+      top: 60px;
       right: 20px;
       svg {
         width: 97px;
@@ -62,7 +62,7 @@
       }
     }
     &_sixth {
-      top: 255px;
+      top: 275px;
       right: 90px;
       svg {
         width: 54px;

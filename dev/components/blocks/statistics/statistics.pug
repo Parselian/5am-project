@@ -4,7 +4,7 @@ mixin Card(title, text)
       div.statistics__card-text=text
 
 mixin Statistics()
-    .statistics
+    .statistics.divider
         .statistics__wrap.container
             +Card('7 брендов', 'Под нашим чутким контролем')
             +Card('15 человек', 'Специалистов, качественно работающих над проектами')

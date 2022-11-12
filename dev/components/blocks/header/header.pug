@@ -1,10 +1,9 @@
 include ../logo/logo
 include ../button/button
 include ../menu/menu
-include ../divider/divider
 
 mixin Header()
-  .header
+  .header.divider
     .header__wrap.container
       +Logo({
         id: 'logo_colorful',

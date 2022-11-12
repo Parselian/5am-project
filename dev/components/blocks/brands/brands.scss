@@ -7,15 +7,24 @@
     &r {
       display: flex;
     }
-    padding: 63px 16px 16px;
+    padding: 30px 16px 16px;
     width: 245px;
     border: 2px solid $brands-slide-border-color;
     -webkit-border-radius: 24px;
     -moz-border-radius: 24px;
     border-radius: 24px;
-    svg {
+    &-icon {
+      &-wrap {
+        margin-left: auto;
+        margin-right: auto;
+        width: 189px;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       margin-bottom: 30px;
-      max-width: 190px;
+      width: fit-content;
     }
     &-title {
       margin-bottom: 24px;
