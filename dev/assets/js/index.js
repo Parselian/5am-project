@@ -21,12 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const sliderInit = () => {
-    const slider = document.querySelector('.brands__slider')
     const swiper = new Swiper('.swiper', {
       loop: true,
       speed: 400,
-      slidesPerView: 5,
-      spaceBetween: 20
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      mousewheel: {
+        sensitivity: 2
+      }
     })
 
   }

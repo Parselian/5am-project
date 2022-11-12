@@ -6,12 +6,14 @@
   &__slide {
     &r {
       //position: relative;
-      width: 84vw;
+      //width: 84vw;
       //overflow: visible;
+      width: 100vw;
       display: flex;
     }
     padding: 30px 16px 16px;
     width: 245px;
+    height: auto;
     border: 2px solid $brands-slide-border-color;
     -webkit-border-radius: 24px;
     -moz-border-radius: 24px;

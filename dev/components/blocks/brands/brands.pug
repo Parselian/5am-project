@@ -19,7 +19,7 @@ mixin BrandsCard(iconId, additionalClasses, title, text, buttonText)
 mixin Brands(settings)
     .brands.divider
         .brands__wrap.container
-            h2.title Наши бренды
+            h2.brands__title.title Наши бренды
             .brands__slider.swiper
                 .swiper-wrapper
                     +BrandsCard(
