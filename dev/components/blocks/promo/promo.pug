@@ -1,10 +1,15 @@
 include ../button/button
 include ../blob/blob
+include ../bg-collage/collage
 
 mixin Promo(settings)
     .promo.divider
         .promo__wrap.container
             .promo__col
+                +Collage({
+                  additionalClasses: 'promo__collage',
+                  iconId: 'bg-mockup'
+                })
                 h1.promo__title.title=settings.title
                 .promo__subtitle.line-break.
                     Мы инвестируем в IT, а наши бренды #[<span class="line-break"></span>] разрабатывают инновацонные продукты

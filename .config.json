@@ -1,8 +1,8 @@
 {
   "ftp": {
-    "host": "",
-    "user": "",
-    "pwd": "",
-    "deployPath": ""
+    "host": "136.243.14.123",
+    "user": "vyach129",
+    "pwd": "(-{r6)OoDkvERy[GZgVIZPt0r{cYDni4IpZGv_sn[RW(YR0iEpmMQ6CzpB3Y_IuZX]7Gq C5Dlr>IkV937]M-8(Op0ILSs8nXNXkT2JD( tqW8>o_crHZB8ZB]}0Lh)jB9Q3EAEq9p7zoV{XD2]LjXK0AdIkgjPon-d1qchv6lFitpMg>xfIU-mUJ1y5hDDPHtNU7Kyg8U<<OEW QH0wxmc9q(Vhm<QNj]f[HDA}3vNZ<J>iDt2c3)2hxiJchl}G",
+    "deployPath": "www/parseliandev.site/projects/5am"
   }
 }

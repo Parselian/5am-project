@@ -1,0 +1,6 @@
+mixin Collage(settings)
+    - var classes = !!settings.additionalClasses ? `${settings.additionalClasses} collage` : 'collage'
+
+    div(class=classes)
+        svg.collage__icon
+            use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${settings.iconId}`)
