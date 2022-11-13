@@ -6,6 +6,8 @@ mixin Button(settings)
         - var buttonClasses = `${settings.additionalClasses} button button_transparent`
     else if (settings.type === 'normal')
         - var buttonClasses = `${settings.additionalClasses} button`
+    else if (settings.type === 'inverted')
+        - var buttonClasses = `${settings.additionalClasses} button button_inverted`
 
     if (!!settings.iconID)
         button(id=settings.id class=buttonClasses)

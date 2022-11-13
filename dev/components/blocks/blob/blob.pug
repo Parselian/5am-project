@@ -2,12 +2,13 @@ mixin Blob(settings)
     - var size = !!settings.size ? `blob_${settings.size}` : ''
     - var classes = !!settings.additionalClasses ? `${settings.additionalClasses} blob ${size}` : `blob ${size}`
 
-    div(class=classes data-aos="fade-up")
+    div(class=classes data-aos=settings.animationSettings.timingFunction
+        data-aos-delay=settings.animationSettings.delay data-aos-offset=settings.animationSettings.offset)
         if (settings.isAnimated === true)
             svg.blob__animation
                 use(xlink:href=`./assets/images/svg/symbol/sprite.svg#blob-animation`)
         if (settings.iconType === 'svg')
-            svg
+            svg.blob__icon
                 use(xlink:href=`./assets/images/svg/symbol/sprite.svg#${settings.iconId}`)
         else if (settings.iconType === 'img')
           img(src=`./assets/images/${settings.iconId}` alt="")

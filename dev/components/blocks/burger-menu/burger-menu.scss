@@ -6,11 +6,12 @@
   &__content {
     position: fixed;
     top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     height: calc(100vh - 90px);
     backdrop-filter: blur(20px);
+    z-index: 99999;
 
     visibility: hidden;
     opacity: 0;
@@ -24,8 +25,8 @@
 
   &__nav {
     position: relative;
+    top: 20vh;
     margin-left: 72px;
-    top: 32vh;
 
     &-link {
       display: block;
@@ -175,6 +176,7 @@
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(20px);
+    z-index: 99999;
 
     &:before {
       position: absolute;

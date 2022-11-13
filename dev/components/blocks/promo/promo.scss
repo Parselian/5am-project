@@ -146,9 +146,16 @@
     }
   }
   @media (max-width: 576px) {
+    padding-bottom: 80px;
     &__wrap {
       flex-direction: column;
       align-items: center;
+    }
+    &__title {
+      font-size: 56px;
+    }
+    &__subtitle {
+      margin-bottom: 80px;
     }
     &__col {
       &:last-child {
@@ -167,6 +174,28 @@
         top: unset;
         left: unset;
         right: unset;
+      }
+      &_first {
+        left: -5px;
+      }
+      &_second {
+        left: 5px;
+      }
+      &_third {
+        top: 10px;
+        left: -5px;
+      }
+      &_fourth {
+        top: -20px;
+        left: 5px;
+      }
+      &_fifth {
+        left: -5px;
+        top: -10px;
+      }
+      &_sixth {
+        top: -10px;
+        left: 5px;
       }
     }
   }

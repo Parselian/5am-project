@@ -33,7 +33,12 @@ block content
           iconType: 'svg',
           iconId: 'village-service',
           text: 'Сервис для УК посёлков',
-          isAnimated: true
+          isAnimated: true,
+          animationSettings: {
+            timingFunction: 'fade-up',
+            delay: 100,
+            offset: 300
+          }
         },
         {
           additionalClasses: 'promo__blob promo__blob_second',
@@ -42,7 +47,12 @@ block content
           iconId: 'blob-icon-2',
           text: 'Перейти',
           link: '#',
-          isAnimated: false
+          isAnimated: false,
+          animationSettings: {
+            timingFunction: 'fade-up',
+            delay: 400,
+            offset: 300
+          }
         },
         {
           additionalClasses: 'promo__blob promo__blob_third',
@@ -51,7 +61,12 @@ block content
           iconId: 'village-service',
           text: 'Перейти',
           link: '#',
-          isAnimated: false
+          isAnimated: false,
+          animationSettings: {
+            timingFunction: 'fade-up',
+            delay: 100,
+            offset: 300
+          }
         },
         {
           additionalClasses: 'promo__blob promo__blob_fourth',
@@ -59,7 +74,12 @@ block content
           iconType: 'img',
           iconId: 'software-agency-icon.png',
           text: 'Студия разработки ПО',
-          isAnimated: false
+          isAnimated: false,
+          animationSettings: {
+            timingFunction: 'fade-up',
+            delay: 400,
+            offset: 300
+          }
         },
         {
           additionalClasses: 'promo__blob promo__blob_fifth',
@@ -67,7 +87,12 @@ block content
           iconType: 'svg',
           iconId: '3d-design-icon',
           text: 'Студия 3D дизайна',
-          isAnimated: true
+          isAnimated: true,
+          animationSettings: {
+            timingFunction: 'fade-up',
+            delay: 100,
+            offset: 300
+          }
         },
         {
           additionalClasses: 'promo__blob promo__blob_sixth',
@@ -76,7 +101,12 @@ block content
           iconId: 'blob-icon-3',
           text: 'Перейти',
           link: '#',
-          isAnimated: false
+          isAnimated: false,
+          animationSettings: {
+            timingFunction: 'fade-up',
+            delay: 400,
+            offset: 300
+          }
         }
       ]
     })
@@ -90,5 +120,5 @@ block content
 
 block scripts
     script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
-    script(src="./assets/js/swiper.js")
+    script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
     script(src="./assets/js/index.js")

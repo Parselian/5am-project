@@ -1,7 +1,7 @@
 'use-strict'
 
-  AOS.init()
 document.addEventListener('DOMContentLoaded', () => {
+  AOS.init()
 
   const burgerMenuContent = document.querySelector('.burger-menu__content'),
     burgerBtns = document.querySelectorAll('.burger-btn'),

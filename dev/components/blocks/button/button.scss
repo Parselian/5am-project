@@ -9,6 +9,11 @@
       stroke-width: 2px;
     }
   }
+  &_inverted {
+    color: $button-color;
+    background-color: $inverted-button-bg-color;
+    border: 2px solid $button-color;
+  }
 
   display: flex;
   width: fit-content;

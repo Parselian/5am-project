@@ -11,6 +11,8 @@
       width: 100vw;
       display: flex;
     }
+
+    position: relative;
     padding: 30px 16px 16px;
     width: 245px;
     height: auto;
@@ -38,9 +40,14 @@
       color: $brands-slide-title-color;
     }
     &-text {
-      margin-bottom: 35px;
+      margin-bottom: 75px;
       font-size: 14px;
       color: $text-color;
+    }
+    &-button {
+      position: absolute;
+      bottom: 15px;
+      padding: 12px 64px;
     }
   }
 

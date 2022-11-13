@@ -30,6 +30,9 @@
   }
 
   @media (max-width: 992px) {
+    &.divider:after {
+      display: none;
+    }
     &__menu {
      display: none;
     }
